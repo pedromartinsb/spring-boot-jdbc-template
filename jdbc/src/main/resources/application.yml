@@ -1,0 +1,17 @@
+app:
+  datasource:
+    main:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/jdbc-template
+      username: postgres
+      password: postgres
+      pool-size: 30
+
+spring:
+  flyway:
+    locations: classpath:/db/migration
+
+server:
+  error:
+    include-binding-errors: always
+    include-message: always
